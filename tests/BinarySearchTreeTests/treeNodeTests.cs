@@ -9,7 +9,7 @@ namespace tests {
         TreeNode rightChild = new TreeNode (2);
         TreeNode leftChild = new TreeNode (3);
         #endregion
-        
+
         #region Tests
         [Fact]
         public void ParentKeyIsCorrect () {
@@ -65,16 +65,40 @@ namespace tests {
         [Fact]
         public void ParentHasChildrenThenAllKeysAreCorrect () {
             //Given
-            Assert.Null(parent.GetRightChild());
-            Assert.Null(parent.GetLeftChild());
+            Assert.Null (parent.GetRightChild ());
+            Assert.Null (parent.GetLeftChild ());
 
             //When
-            parent.SetRightChild(rightChild);
-            parent.SetLeftChild(leftChild);
+            parent.SetRightChild (rightChild);
+            parent.SetLeftChild (leftChild);
 
             //Then
-            Assert.Equal(2, parent.GetRightChild().GetKey());
-            Assert.Equal(3, parent.GetLeftChild().GetKey());
+            Assert.Equal (2, parent.GetRightChild ().GetKey ());
+            Assert.Equal (3, parent.GetLeftChild ().GetKey ());
+        }
+
+        [Fact]
+        public void SetParentSetsParent () {
+            //Given
+            Assert.Null (leftChild.GetParent ());
+
+            //When
+            leftChild.SetParent (parent);
+
+            //Then
+            Assert.Equal (parent, leftChild.GetParent ());
+        }
+
+        [Fact]
+        public void WhenParentIsSetParentHasCorrectKey () {
+            //Given
+            Assert.Null(rightChild.GetParent());
+
+            //When
+            rightChild.SetParent(parent);
+
+            //Then
+            Assert.Equal(1, rightChild.GetParent().GetKey());
         }
         #endregion
     }
