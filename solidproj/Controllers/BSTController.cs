@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace solidproj.Controllers {
-    [Route("solid/")]
+
+    [Route ("solid/")]
     [ApiController]
     public class BSTController : ControllerBase {
         // GET api/values
@@ -15,7 +16,7 @@ namespace solidproj.Controllers {
         }
 
         [HttpGet ("bst/")]
-        public ActionResult<string> GetBst() {
+        public ActionResult<string> GetBst () {
             return "bst is up";
         }
 
