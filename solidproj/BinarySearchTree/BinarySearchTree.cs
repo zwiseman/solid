@@ -24,6 +24,9 @@ namespace solidproj {
         #endregion
 
         #region Class Methods
+        /**
+         * Insert function to handle inserts into the BST.
+         */
         public TreeNode Insert (TreeNode newNode) {
             TreeNode tempRoot = null;
             TreeNode root = this.root;
@@ -60,6 +63,9 @@ namespace solidproj {
             return node;
         }
 
+        /**
+         * Return the minimum key value node in the tree.
+         */
         public TreeNode Minimum () {
             return Minimum (root);
         }
@@ -71,6 +77,9 @@ namespace solidproj {
             return root;
         }
 
+        /**
+         * Return the maximum key value in the tree.
+         */
         public TreeNode Maximum () {
             return Maximum (root);
         }
