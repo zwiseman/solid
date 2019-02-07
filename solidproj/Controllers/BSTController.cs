@@ -20,6 +20,21 @@ namespace solidproj.Controllers {
             return "bst is up";
         }
 
+        [HttpGet ("preOrderTraversal/")]
+        public ActionResult<string> GetPreOrderTraversal () {
+            return "bst is up";
+        }
+
+        [HttpGet ("inOrderTraversal/")]
+        public ActionResult<string> GetInOrderTraversal () {
+            return "bst is up";
+        }
+
+        [HttpGet ("postOrderTraversal/")]
+        public ActionResult<string> GetPostOrderTraversal () {
+            return "bst is up";
+        }
+
         // GET api/values/5
         [HttpGet ("{id}")]
         public ActionResult<string> Get (int id) {

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using solidproj;
 using Xunit;
 
@@ -169,6 +170,95 @@ namespace tests {
 
             // Then
             Assert.Equal (root, bst.Maximum ());
+        }
+
+        [Fact]
+        public void NodeIsNotInTreeReturnNullSearch () {
+            // Given
+            TreeNode root = new TreeNode (10);
+            TreeNode leftChild = new TreeNode (-11);
+            TreeNode minimum = new TreeNode (-100);
+
+            // When 
+
+            // Then
+            Assert.Null (bst.Search (-10));
+        }
+
+        [Fact]
+        public void NodeIsInTreeReturnCorrectSearch () {
+            //Given
+            TreeNode root = new TreeNode (10);
+            TreeNode leftChild = new TreeNode (-11);
+            TreeNode minimum = new TreeNode (-100);
+
+            //When
+            bst.Insert (root);
+            bst.Insert (leftChild);
+            bst.Insert (minimum);
+
+            //Then
+            Assert.Equal (leftChild, bst.Search (-11));
+        }
+
+        [Fact]
+        public void PreOrderTraversalReturnsCorrectOrder () {
+            TreeNode root = new TreeNode (10);
+            TreeNode leftChild = new TreeNode (20);
+            TreeNode minimum = new TreeNode (-100);
+            List<int> traversal = new List<int>();
+            traversal.Add(10);
+            traversal.Add(-100);
+            traversal.Add(20);
+            bst.Insert (root);
+            bst.Insert (leftChild);
+            bst.Insert (minimum);
+
+            //When
+            bst.PreOrderTraversal();
+
+            //Then
+            Assert.Equal(traversal, bst.GetPreOrderList());
+        }
+
+        [Fact]
+        public void InOrderTraversalReturnsCorrectOrder () {
+            TreeNode root = new TreeNode (10);
+            TreeNode leftChild = new TreeNode (20);
+            TreeNode minimum = new TreeNode (-100);
+            List<int> traversal = new List<int>();
+            traversal.Add(-100);
+            traversal.Add(10);
+            traversal.Add(20);
+            bst.Insert (root);
+            bst.Insert (leftChild);
+            bst.Insert (minimum);
+
+            //When
+            bst.InOrderTraversal();
+
+            //Then
+            Assert.Equal(traversal, bst.GetInOrderList());
+        }
+
+        [Fact]
+        public void PostOrderTraversalReturnsCorrectOrder () {
+            TreeNode root = new TreeNode (10);
+            TreeNode leftChild = new TreeNode (20);
+            TreeNode minimum = new TreeNode (-100);
+            List<int> traversal = new List<int>();
+            traversal.Add(-100);
+            traversal.Add(20);
+            traversal.Add(10);
+            bst.Insert (root);
+            bst.Insert (leftChild);
+            bst.Insert (minimum);
+
+            //When
+            bst.PostOrderTraversal();
+
+            //Then
+            Assert.Equal(traversal, bst.GetPostOrderList());
         }
 
         [Fact]
