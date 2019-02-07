@@ -7,6 +7,7 @@ namespace solidproj {
         #region Class Variables
         TreeNode root;
         int size;
+        List<int> binarySearchTree = new List<int>();
         List<int> preOrder = new List<int> ();
         List<int> inOrder = new List<int> ();
         List<int> postOrder = new List<int> ();
@@ -26,6 +27,10 @@ namespace solidproj {
 
         public TreeNode GetRoot () {
             return this.root;
+        }
+
+        public List<int> GetBinarySearchTree() {
+            return binarySearchTree;
         }
 
         public List<int> GetPreOrderList () {
@@ -70,6 +75,7 @@ namespace solidproj {
                 tempRoot.SetRightChild (newNode);
                 size++;
             }
+            binarySearchTree.Add(newNode.GetKey());
             return newNode;
         }
 
