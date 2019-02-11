@@ -31,8 +31,12 @@ namespace solidproj.Controllers {
                 new TreeNode (-47),
                 new TreeNode (30),
                 new TreeNode (50),
-                new TreeNode (401),
-                new TreeNode (20)
+                new TreeNode (110),
+                new TreeNode (20),
+                new TreeNode (-50),
+                new TreeNode (200),
+                new TreeNode (327),
+                new TreeNode (199)
             };
 
             foreach (var treeNode in treeNodes) {
