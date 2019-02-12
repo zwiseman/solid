@@ -15,6 +15,7 @@ export class DrawTree {
 
         // Set treeNodes to data recieved from API.
         this.treeNodes = data;
+        console.log(data);
 
         // Stratify 'flat-data' to put into a hierarchy structure.
         const treeData = d3.stratify()
@@ -29,6 +30,7 @@ export class DrawTree {
                         const temp = d.children[0];
                         d.children[0] = d.children[1];
                         d.children[1] = temp;
+                    } else {
                     }
                 }
             }
@@ -46,12 +48,11 @@ export class DrawTree {
             .size([960, 500]);
 
         nodes = tree(nodes);
-
         const svg = d3.select('figure').append('svg')
             .style('width', '960px')
-            .style('height', '600px'),
+            .style('height', '560px'),
             g = svg.append('g')
-                .attr('transform', 'translate(' + -100 + ',' + 30 + ')');
+                .attr('transform', 'translate(' + -25 + ',' + 30 + ')');
 
         const links = g.selectAll('.links')
             .data(nodes.descendants().slice(1))

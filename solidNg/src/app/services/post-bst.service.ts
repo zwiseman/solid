@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,7 +10,12 @@ export class PostBstService {
 
   constructor(private http: HttpClient) { }
 
-  postBst(body: string): Observable<any> {
-    return this.http.post(this.url, body);
+  postBst(body): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type' : 'application/JSON'
+    });
+
+    const options = {headers : headers};
+    return this.http.post(this.url, body, options);
   }
 }

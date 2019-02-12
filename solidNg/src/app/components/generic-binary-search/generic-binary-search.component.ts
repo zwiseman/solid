@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BinarySearchTreeService } from 'services/index';
 import { Subscription } from 'rxjs';
-import * as d3 from 'd3';
 import { DrawTree } from 'app/classes/drawTree';
 
 
@@ -14,6 +13,7 @@ export class GenericBinarySearchComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   treeNodes: any;
   drawTree: DrawTree;
+
   constructor(private binarySearchService: BinarySearchTreeService) { }
 
   ngOnInit() {
