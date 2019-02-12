@@ -38,7 +38,7 @@ export class DrawTree {
         /************ Draw Tree ************/
         const margin = { top: 20, right: 120, bottom: 200, left: 160 },
             width = 960 - margin.right - margin.left,
-            height = 1000 - margin.top - margin.bottom;
+            height = 500 - margin.top - margin.bottom;
 
         const i = 0;
 
@@ -47,12 +47,11 @@ export class DrawTree {
 
         nodes = tree(nodes);
 
-        const svg = d3.select('p').append('svg')
-            .attr('width', 960)
-            .attr('height', 550),
+        const svg = d3.select('div').append('svg')
+            .style('width', '960px')
+            .style('height', '600px'),
             g = svg.append('g')
-                .attr('transform', 'translate(' + -100 + ',' + 20 + ')')
-            ;
+                .attr('transform', 'translate(' + -100 + ',' + 30 + ')');
 
         const links = g.selectAll('.links')
             .data(nodes.descendants().slice(1))

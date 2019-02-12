@@ -1,20 +1,15 @@
-// .node-circle {
-
-// }
-
-.link {
-    fill: transparent;
-    stroke: black;
-    stroke-width: 2px;
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
 }
 
-.circle {
-    fill: #fff;
-    stroke: steelblue;
-    stroke-width: 3px;
-  }
-  
-
-// .node-text {
-
-// }
+.svg-container-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
