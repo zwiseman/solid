@@ -165,7 +165,6 @@ namespace solidproj.Controllers {
                 nodes.Add(node);
                 i++;
             }
-
             return nodes;
         }
 

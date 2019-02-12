@@ -47,7 +47,7 @@ export class DrawTree {
 
         nodes = tree(nodes);
 
-        const svg = d3.select('div').append('svg')
+        const svg = d3.select('figure').append('svg')
             .style('width', '960px')
             .style('height', '600px'),
             g = svg.append('g')

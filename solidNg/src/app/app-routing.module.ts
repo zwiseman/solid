@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GenericBinarySearchComponent, EnterBstComponent } from './components';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', redirectTo: '/genericBst', pathMatch: 'full'},
+  {path: 'genericBst', component: GenericBinarySearchComponent},
+  {path: 'postBst', component: EnterBstComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
