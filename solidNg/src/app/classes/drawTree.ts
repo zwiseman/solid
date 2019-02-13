@@ -45,14 +45,14 @@ export class DrawTree {
         const i = 0;
 
         const tree = d3.tree()
-            .size([960, 500]);
+            .size([670, 400]);
 
         nodes = tree(nodes);
         const svg = d3.select('figure').append('svg')
             .style('width', '960px')
             .style('height', '560px'),
             g = svg.append('g')
-                .attr('transform', 'translate(' + -25 + ',' + 30 + ')');
+                .attr('transform', 'translate(' + 0 + ',' + 30 + ')');
 
         const links = g.selectAll('.links')
             .data(nodes.descendants().slice(1))
@@ -82,7 +82,7 @@ export class DrawTree {
             });
 
         node.append('circle')
-            .attr('r', 20)
+            .attr('r', 16)
             .style('stroke', 'blue')
             .style('stroke-width', '3px')
             .style('fill', '#fff');

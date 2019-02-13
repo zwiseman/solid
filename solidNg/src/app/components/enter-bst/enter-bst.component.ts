@@ -30,6 +30,10 @@ export class EnterBstComponent implements OnInit, OnDestroy {
     }
   }
 
+  changeInput() {
+    console.log(this.bst);
+  }
+
   ngOnDestroy() {
     if (this.subscription) {
       this.subscription.unsubscribe();

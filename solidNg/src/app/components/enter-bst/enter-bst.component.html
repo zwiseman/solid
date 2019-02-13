@@ -1,9 +1,11 @@
-<br>
-<br>
-<input type="text" [(ngModel)]="bst" class="form-control" placeholder="Enter nodes sparated by a comma(,)">
-<br>
-<br>
-<button class="btn btn-success" (click)="postbst()">Draw Tree</button>
-<br>
-<br>
-<figure class="svg-container"></figure>
+<div>
+    <input type="text" [(ngModel)]="bst" (ngModelChange)="changeInput()" class="form-control" placeholder="Enter nodes sperated by a comma(,)">
+</div>
+
+<div>
+    <button class="btn btn-success" (click)="postbst()">Draw Tree</button>
+</div>
+
+<div>
+    <figure class="svg-container"></figure>
+</div>
