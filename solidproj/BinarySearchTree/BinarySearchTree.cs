@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 namespace solidproj {
-    public class BinarySearchTree {
+    public class BinarySearchTree : IBinarySearchTree<TreeNode> {
 
         #region Class Variables
         TreeNode root;
