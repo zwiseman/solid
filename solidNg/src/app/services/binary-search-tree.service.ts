@@ -14,5 +14,4 @@ export class BinarySearchTreeService {
   getBinarySearchTree(): Observable<any> {
     return this.http.get(this.url);
   }
-
 }

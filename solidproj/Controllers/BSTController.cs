@@ -16,7 +16,7 @@ namespace solidproj.Controllers {
         }
 
         [HttpGet ("binarySearchTree")]
-        public ActionResult<List<Node>> GetBst () {
+        public List<Node> GetBst () {
             BinarySearchTree bst = new BinarySearchTree ();
             List<Node> nodes = new List<Node>();
             Node node;

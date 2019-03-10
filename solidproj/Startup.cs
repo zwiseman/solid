@@ -25,13 +25,22 @@ namespace solidproj
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => {
+                options.AddPolicy("AllowSpecificOrigins",
+                    builder => {
+                        builder.WithOrigins("http://localhost:4200")
+                            .WithOrigins("http://zwiseman.com.s3-website-us-east-1.amazonaws.com")
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                    });
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors("AllowSpecificOrigins");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -43,11 +52,6 @@ namespace solidproj
 
             // app.UseHttpsRedirection();
             app.UseMvc();
-            app.UseCors(builder => 
-                builder.WithOrigins("http://localhost:5000")
-                .AllowAnyHeader()
-                .AllowAnyOrigin()
-                .AllowAnyMethod());
         }
     }
 }

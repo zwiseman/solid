@@ -1,0 +1,14 @@
+/Users/zacharywiseman/Documents/code/solid/solidproj/bin/Debug/netcoreapp2.2/solidproj.deps.json
+/Users/zacharywiseman/Documents/code/solid/solidproj/bin/Debug/netcoreapp2.2/solidproj.runtimeconfig.json
+/Users/zacharywiseman/Documents/code/solid/solidproj/bin/Debug/netcoreapp2.2/solidproj.runtimeconfig.dev.json
+/Users/zacharywiseman/Documents/code/solid/solidproj/bin/Debug/netcoreapp2.2/solidproj.dll
+/Users/zacharywiseman/Documents/code/solid/solidproj/bin/Debug/netcoreapp2.2/solidproj.pdb
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.csprojAssemblyReference.cache
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.csproj.CoreCompileInputs.cache
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.RazorAssemblyInfo.cache
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.RazorAssemblyInfo.cs
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.AssemblyInfoInputs.cache
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.AssemblyInfo.cs
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.RazorTargetAssemblyInfo.cache
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.dll
+/Users/zacharywiseman/Documents/code/solid/solidproj/obj/Debug/netcoreapp2.2/solidproj.pdb
